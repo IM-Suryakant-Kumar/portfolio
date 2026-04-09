@@ -3,18 +3,21 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --color-primary: #ffffff;
-  --color-secondary: #000000;
+  --color-primary: #fbfbfb;
+  --color-secondary: #1c1c20;
+  --color-accent: #d4d4d8;
+  --color-link: #6ab0f3;
 }
 
 html.dark {
-  --color-primary: #000000;
-  --color-secondary: #ffffff;
+  --color-primary: #1c1c20;
+  --color-secondary: #fbfbfb;
 }
 
 @theme inline {
   --color-primary: var(--color-primary);
   --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
   --font-josefin: var(--font-josefin);
   --font-cinzel: var(--font-cinzel);
 }

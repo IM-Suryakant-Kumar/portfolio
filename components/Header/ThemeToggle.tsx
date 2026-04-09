@@ -1,19 +1,33 @@
 "use client";
 
-// import { useState } from "react";
+import { useState } from "react";
+import { MdDarkMode, MdLightMode, MdOutlineDarkMode } from "react-icons/md";
 
 export const ThemeToggle = () => {
-  // const [theme, setTheme] = useState<"dark" | "light">(localStorage.theme);
+	const [theme, setTheme] = useState<"dark" | "light">(
+		localStorage.theme || "light",
+	);
 
-  const toggleTheme = () => {
-    // setTheme(prevTheme => prevTheme === "light" ? "dark" : "light");
-    // localStorage.theme = theme === "light" ? "dark" : "light";
-    document.documentElement.classList.toggle("dark");
-  }
+	const toggleTheme = () => {
+		setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+		// localStorage.theme = theme === "light" ? "dark" : "light";
+		if (theme === "light") {
+			document.documentElement.classList.add("dark");
+		} else {
+			document.documentElement.classList.remove("dark");
+		}
+	};
 
-  return (
-    <div>
-      <button onClick={toggleTheme} className="w-8 h-8 bg-secondary dark:bg-primary rounded-full border-2 cursor-pointer" />
-    </div>
-  )
-}
+	return (
+		<button
+			onClick={toggleTheme}
+			className="hover:bg-secondary/10 p-2 rounded-md cursor-pointer"
+		>
+			{theme === "light" ? (
+				<MdOutlineDarkMode className="w-6 h-6 " />
+			) : (
+				<MdLightMode className="w-6 h-6 " />
+			)}
+		</button>
+	);
+};

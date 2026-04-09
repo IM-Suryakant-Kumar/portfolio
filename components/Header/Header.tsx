@@ -9,11 +9,11 @@ export const Header = () => {
 					Suryakant
 				</h1>
 				<Menubar />
-				<ul className="hidden md:flex items-center gap-4">
+				<ul className="hidden md:flex items-center gap-6">
 					{links.map(({ name, href }) => (
 						<li key={href} className="hidden md:inline-block">
 							<a
-								className="px-4 py-2 text-secondary hover:text-orange-600 text-lg ease-in-out duration-300"
+								className="p-2.5 text-secondary hover:bg-secondary/10 text-lg rounded-md"
 								href={href}
 							>
 								{name}

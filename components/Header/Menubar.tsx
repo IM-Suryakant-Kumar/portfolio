@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { links } from "../lib";
+import { links } from "@/lib";
 
-const Menubar = () => {
+export const Menubar = () => {
 	const [showMenu, setShowMenu] = useState(false);
 
 	const toggleMenu = () => setShowMenu(!showMenu);
@@ -50,5 +50,3 @@ const Menubar = () => {
 		</>
 	);
 };
-
-export default Menubar;

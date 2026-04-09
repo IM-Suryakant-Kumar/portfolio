@@ -1,7 +1,7 @@
 import { blogs } from "@/lib";
 
 
-const Blogs = () => {
+export const Blogs = () => {
 	return (
 		<article
 			id="blogs"
@@ -26,5 +26,3 @@ const Blogs = () => {
 		</article>
 	);
 };
-
-export default Blogs;

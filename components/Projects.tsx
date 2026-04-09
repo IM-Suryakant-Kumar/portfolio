@@ -2,7 +2,7 @@ import { projects } from "@/lib";
 import Image from "next/image";
 
 
-const Projects = () => {
+export const Projects = () => {
 	return (
 		<article
 			id="projects"
@@ -58,5 +58,3 @@ const Projects = () => {
 		</article>
 	);
 };
-
-export default Projects;

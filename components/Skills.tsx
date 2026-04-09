@@ -1,6 +1,6 @@
 import { skills } from "../lib";
 
-const Skills = () => {
+export const Skills = () => {
 	return (
 		<article
 			id="skills"
@@ -20,5 +20,3 @@ const Skills = () => {
 		</article>
 	);
 };
-
-export default Skills;

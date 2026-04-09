@@ -1,7 +1,7 @@
 import { links } from "@/lib";
-import Menubar from "./Menubar";
+import { Menubar, ThemeToggle } from "@/components/Header";
 
-const Header = () => {
+export const Header = () => {
 	return (
 		<header className="fixed top-0 left-0 right-0 z-50 bg-primary text-secondary border-b-2 border-gray-200">
 			<nav className="w-full max-w-7xl mx-auto h-15 px-2 flex justify-between items-center">
@@ -21,9 +21,8 @@ const Header = () => {
 						</li>
 					))}
 				</ul>
+				<ThemeToggle />
 			</nav>
 		</header>
 	);
 };
-
-export default Header;

@@ -3,7 +3,7 @@ import { MdMailOutline } from "react-icons/md";
 import { PiLinkedinLogo } from "react-icons/pi";
 import { VscGithubAlt } from "react-icons/vsc";
 
-const Hero = () => {
+export const Hero = () => {
 	return (
 		<article
 			id="home"
@@ -32,5 +32,3 @@ const Hero = () => {
 		</article>
 	);
 };
-
-export default Hero;

@@ -3,7 +3,7 @@ import { MdMailOutline } from "react-icons/md";
 import { PiLinkedinLogo } from "react-icons/pi";
 import { VscGithubAlt } from "react-icons/vsc";
 
-const Contact = () => {
+export const Contact = () => {
 	return (
 		<article
 			id="contact"
@@ -31,5 +31,3 @@ const Contact = () => {
 		</article>
 	);
 };
-
-export default Contact;

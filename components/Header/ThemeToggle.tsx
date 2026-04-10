@@ -1,12 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { MdDarkMode, MdLightMode, MdOutlineDarkMode } from "react-icons/md";
+import { MdLightMode, MdOutlineDarkMode } from "react-icons/md";
 
 export const ThemeToggle = () => {
-	const [theme, setTheme] = useState<"dark" | "light">(
-		localStorage.theme || "light",
-	);
+	const [theme, setTheme] = useState<"dark" | "light">("light");
 
 	const toggleTheme = () => {
 		setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));

@@ -11,9 +11,9 @@ export const Header = () => {
 				<Menubar />
 				<ul className="hidden md:flex items-center gap-6">
 					{links.map(({ name, href }) => (
-						<li key={href} className="hidden md:inline-block">
+						<li key={href} className="hidden md:flex ">
 							<a
-								className="p-2.5 text-secondary hover:bg-secondary/10 text-lg rounded-md"
+								className="text-secondary hover:bg-secondary/10 text-lg rounded-md"
 								href={href}
 							>
 								{name}

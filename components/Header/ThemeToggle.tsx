@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { MdLightMode, MdOutlineDarkMode } from "react-icons/md";
 
-export const ThemeToggle = () => {
+export const  ThemeToggle = () => {
 	const [theme, setTheme] = useState("light");
 
 	const toggleTheme = () => {
@@ -36,9 +36,9 @@ export const ThemeToggle = () => {
 			className="hover:bg-secondary/10 p-2 rounded-md cursor-pointer"
 		>
 			{theme === "light" ? (
-				<MdOutlineDarkMode className="w-6 h-6 " />
+				<MdOutlineDarkMode className="w-6 h-6 text-secondary/90" />
 			) : (
-				<MdLightMode className="w-6 h-6 " />
+				<MdLightMode className="w-6 h-6 text-secondary/90" />
 			)}
 		</button>
 	);

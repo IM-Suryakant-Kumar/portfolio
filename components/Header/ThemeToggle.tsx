@@ -1,20 +1,34 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MdLightMode, MdOutlineDarkMode } from "react-icons/md";
 
 export const ThemeToggle = () => {
-	const [theme, setTheme] = useState<"dark" | "light">("light");
+	const [theme, setTheme] = useState("light");
 
 	const toggleTheme = () => {
-		setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-		// localStorage.theme = theme === "light" ? "dark" : "light";
-		if (theme === "light") {
-			document.documentElement.classList.add("dark");
-		} else {
-			document.documentElement.classList.remove("dark");
-		}
+		const newTheme = theme === "light" ? "dark" : "light";
+		setTheme(newTheme);
+		document.documentElement.classList.toggle("dark", newTheme === "dark");
+		localStorage.theme = newTheme;
 	};
+
+	useEffect(() => {
+		document.documentElement.classList.toggle(
+			"dark",
+			localStorage.theme === "dark" ||
+				(!("theme" in localStorage) &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches),
+		);
+		(() => {
+			setTheme(
+				localStorage.theme ||
+					(window.matchMedia("(prefers-color-scheme: dark)").matches
+						? "dark"
+						: "light"),
+			);
+		})();
+	}, []);
 
 	return (
 		<button

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Josefin_Sans, Cinzel } from "next/font/google";
 import "./globals.css";
+import { Footer, Header } from "@/components";
 
 const josefin = Josefin_Sans({
   variable: "--font-josefin",
@@ -27,7 +28,9 @@ export default function RootLayout({
       <body
         className={`${josefin.variable} ${cinzel.variable} antialiased`}
       >
+        <Header />
         {children}
+        {/* <Footer /> */}
       </body>
     </html>
   );

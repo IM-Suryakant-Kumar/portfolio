@@ -33,7 +33,7 @@ export const  ThemeToggle = () => {
 	return (
 		<button
 			onClick={toggleTheme}
-			className="hover:bg-secondary/10 p-2 rounded-md cursor-pointer ml-4 lg:ml-auto"
+			className="hover:bg-secondary/10 p-2 rounded-md cursor-pointer ml-4"
 		>
 			{theme === "light" ? (
 				<MdOutlineDarkMode className="w-6 h-6 text-secondary/90" />

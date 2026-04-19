@@ -13,7 +13,7 @@ export const Menubar = () => {
 	const toggleMenu = () => setShowMenu(!showMenu);
 
 	return (
-		<div className="ml-auto lg:order-1 lg:w-full">
+		<div className="ml-auto">
 			<div
 				className="md:hidden flex flex-col justify-center items-end gap-1 hover:bg-secondary/10 p-2 rounded-md cursor-pointer"
 				onClick={toggleMenu}

@@ -30,7 +30,7 @@ html.dark {
 	*,
 	*::before,
 	*::after {
-		@apply font-josefin scroll-smooth;
+		@apply font-josefin;
 	}
 
   body {

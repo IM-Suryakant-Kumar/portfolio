@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { MdLightMode, MdOutlineDarkMode } from "react-icons/md";
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
 export const  ThemeToggle = () => {
 	const [theme, setTheme] = useState("light");
@@ -33,12 +33,12 @@ export const  ThemeToggle = () => {
 	return (
 		<button
 			onClick={toggleTheme}
-			className="hover:bg-secondary/10 p-2 rounded-md cursor-pointer"
+			className="hover:bg-secondary/10 p-2 rounded-md cursor-pointer ml-4 lg:ml-auto"
 		>
 			{theme === "light" ? (
 				<MdOutlineDarkMode className="w-6 h-6 text-secondary/90" />
 			) : (
-				<MdLightMode className="w-6 h-6 text-secondary/90" />
+				<MdOutlineLightMode className="w-6 h-6 text-secondary/90" />
 			)}
 		</button>
 	);

@@ -29,6 +29,7 @@ export default function RootLayout({
         className={`${josefin.variable} ${cinzel.variable} antialiased`}
       >
         <Header />
+        
         {children}
         {/* <Footer /> */}
       </body>

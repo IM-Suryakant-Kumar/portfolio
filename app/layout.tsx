@@ -29,10 +29,10 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={`${josefin.variable} ${cinzel.variable} antialiased`}>
 				<Header />
-				<Sidebar />
+				{/* <Sidebar /> */}
 				<div className="mt-15 lg:mt-0 lg:ml-65">
 					<div className="p-4">{children}</div>
-					<Footer />
+					{/* <Footer /> */}
 				</div>
 			</body>
 		</html>

@@ -1,5 +1,6 @@
 import { ThemeToggle } from "../Header";
 import { SidebarMenuLinks } from ".";
+import Link from "next/link";
 
 export const Sidebar = () => {
 	return (
@@ -21,8 +22,28 @@ export const Sidebar = () => {
 				<div className="p-4 border-b border-secondary/10">
 					<SidebarMenuLinks />
 				</div>
-				<div className="p-4 border-b border-secondary/10">
+				<div className="p-4">
 					<h2 className="text-secondary text-lg font-bold">Stay Connected</h2>
+					<div className="flex flex-col gap-1 mt-2">
+						<Link
+							href="mailto:ksuryakant43@gmail.com"
+							className="text-secondary/70 hover:text-secondary text-sm mt-2"
+						>
+							Email
+						</Link>
+						<Link
+							href="https://github.com/IM-Suryakant-Kumar"
+							className="text-secondary/70 hover:text-secondary text-sm mt-2"
+						>
+							GitHub
+						</Link>
+						<Link
+							href="https://www.linkedin.com/in/suryakant-kumar/"
+							className="text-secondary/70 hover:text-secondary text-sm mt-2"
+						>
+							LinkedIn
+						</Link>
+					</div>
 				</div>
 			</div>
 		</div>

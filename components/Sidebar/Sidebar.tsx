@@ -1,4 +1,5 @@
 import { ThemeToggle } from "../Header";
+import { SidebarMenuLinks } from ".";
 
 export const Sidebar = () => {
 	return (
@@ -9,7 +10,7 @@ export const Sidebar = () => {
 				</div>
 				<div className="p-4 border-b border-secondary/10">
 					<h2 className="text-secondary text-lg font-bold">About me</h2>
-					<p className="text-gray-400">
+					<p className="text-secondary/70">
 						I&apos;m{" "}
 						<span className="span-primary font-bold underline decoration-dotted text-orange-500 font-cinzel">
 							Suryakant
@@ -18,8 +19,11 @@ export const Sidebar = () => {
 					</p>
 				</div>
 				<div className="p-4 border-b border-secondary/10">
+					<SidebarMenuLinks />
 				</div>
-				<div className="p-4 border-b border-secondary/10">div</div>
+				<div className="p-4 border-b border-secondary/10">
+					<h2 className="text-secondary text-lg font-bold">Stay Connected</h2>
+				</div>
 			</div>
 		</div>
 	);

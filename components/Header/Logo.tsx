@@ -4,7 +4,7 @@ export const Logo = () => {
 	return (
 		<Link
 			href="/"
-			className="text-orange-500 text-2xl md:text-3xl font-cinzel font-bold"
+			className="text-orange-500 text-2xl md:text-3xl font-cinzel font-bold lg:text-2xl"
 		>
 			Suryakant
 		</Link>

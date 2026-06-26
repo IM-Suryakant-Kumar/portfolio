@@ -44,7 +44,7 @@ html.dark {
 	}
 
 	article {
-		@apply min-h-screen scroll-mt-15 border-t border-b border-gray-200 p-4;
+		@apply md:p-8;
 	}
 }
 

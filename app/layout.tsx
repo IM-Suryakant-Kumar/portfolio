@@ -31,8 +31,8 @@ export default function RootLayout({
 				<Header />
 				<Sidebar />
 				<div className="mt-15 lg:mt-0 lg:ml-65 xl:ml-80">
-					<div className="p-4">{children}</div>
-					<Footer />
+					<div className="p-6 md:pl-8">{children}</div>
+					{/* <Footer /> */}
 				</div>
 			</body>
 		</html>

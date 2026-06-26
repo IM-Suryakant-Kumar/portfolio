@@ -2,7 +2,7 @@ import { blogs } from "@/lib";
 import Image from "next/image";
 
 export const Blogs = () => (
-	<article className="flex flex-col justify-center gap-4">
+	<article className="flex flex-col justify-center gap-4 mt-10">
 		<div className="flex flex-col justify-center mb-4">
 			<h2 className="title flex items-center gap-4">
 				<Image

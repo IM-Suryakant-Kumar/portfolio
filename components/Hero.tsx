@@ -14,6 +14,10 @@ export const Hero = () => (
 		<h2 className="text-orange-500 text-xl sm:text-2xl font-cinzel font-semibold text-shadow-md">
 			A Frontend Web Developer
 		</h2>
+		<p className="text-secondary/70 text-lg sm:w-3/4">
+			I&apos;m a full stack web developer, passionate about creating responsive and user-friendly web applications. I&apos;ve been making websites since 2021 and writing on this blog!
+		</p>
+		<p className="text-secondary/70 text-lg sm:w-3/4">Everything on this site is written by me, not AI.</p>
 		<div className="flex items-center gap-6 my-8">
 			<a href="https://www.linkedin.com/in/suryakant-kumar/" target="_blank">
 				<PiLinkedinLogo size="2em" fill="orange" color="orange" />

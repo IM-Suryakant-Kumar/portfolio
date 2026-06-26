@@ -1,5 +1,6 @@
 import { projects } from "@/lib";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Projects = () => {
 	return (
@@ -23,32 +24,23 @@ export const Projects = () => {
 				{projects.map((project) => (
 					<div
 						key={project.title}
-						className="border-2 border-gray-300 rounded-md overflow-hidden flex flex-col items-start gap-2 p-4"
-					>
-						<h2 className="text-xl font-cinzel font-semibold">
+						className="border-2 border-secondary/10 rounded-lg overflow-hidden flex flex-col gap-2 p-4"
+          >
+            <p className="text-secondary/60 text-sm">2019</p>
+						<Link href={project.github} target="_blank" className="text-blue-400 hover:underline text-xl font-cinzel font-semibold">
 							{project.title}
-						</h2>
-						<p className="text-md text-gray-600">{project.des}</p>
-						<div className="text-gray-600 text-xs">
-							{project.stack.map((s) => (
-								<div
-									key={project.title + s}
-									className="inline-block mr-2 mb-1 px-2 py-1 rounded border-2 border-gray-300"
-								>
-									{s}
-								</div>
-							))}
-						</div>
-						<div className="w-full flex justify-between mt-4">
+						</Link>
+						<p className="text-md text-secondary/80">{project.des}</p>
+						<div className="flex gap-2 mt-2">
 							<a
-								className="inline-block bg-orange-600 hover:bg-orange-700 text-white border-2 border-orange-400 font-bold px-4 py-1 text-sm rounded-xs ease-in-out duration-300"
+								className="text-secondary hover:text-blue-400 h-8 flex justify-center items-center text-sm font-semibold px-2 border-2 border-secondary/10 hover:border-blue-400 rounded-md"
 								href={project.live}
 								target="_blank"
 							>
 								Demo
 							</a>
 							<a
-								className="inline-block text-orange-600 hover:text-orange-700 font-bold border-2 border-orange-400 hover:border-orange-600 px-4 py-1 text-sm rounded-xs ease-in-out duration-300"
+								className="text-secondary hover:text-blue-400 h-8 flex justify-center items-center text-sm font-semibold px-2 border-2 border-secondary/10 hover:border-blue-400 rounded-md"
 								href={project.github}
 								target="_blank"
 							>

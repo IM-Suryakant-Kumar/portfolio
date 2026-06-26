@@ -24,10 +24,9 @@ export const Blogs = () => (
 					className="flex flex-col mb-4"
 				>
 					<p className="text-secondary/60">
-						March 31
-						{/* {blog.des} */}
+						{blog.des}
 					</p>
-					<h3 className="text-orange-300 text-lg font-bold underline decoration-dotted decoration-2">{blog.title}</h3>
+					<h3 className="text-blue-400 text-lg font-bold underline decoration-secondary decoration-dotted decoration-2 underline-offset-7">{blog.title}</h3>
 				</a>
 			))}
 		</div>

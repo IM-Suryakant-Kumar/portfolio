@@ -4,10 +4,8 @@ export default function Home() {
 	return (
 		<>
 			<Hero />
-			{/* <About /> */}
-			{/* <Skills /> */}
+			<Blogs />
 			{/* <Projects /> */}
-			{/* <Blogs /> */}
 		</>
 	);
 }

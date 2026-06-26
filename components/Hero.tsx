@@ -4,16 +4,16 @@ import { PiLinkedinLogo } from "react-icons/pi";
 import { VscGithubAlt } from "react-icons/vsc";
 
 export const Hero = () => (
-	<article className="flex flex-col justify-center gap-6">
+	<article className="flex flex-col justify-center gap-4">
 		<h1 className="text-orange-400 text-3xl sm:text-4xl leading-relaxed flex flex-col sm:flex-row">
 			<div className="font-cinzel font-semibold text-shadow-md">Hi 👋!</div>{" "}
 			<div className="font-cinzel font-semibold text-shadow-md">
 				I&apos;m Suryakant
 			</div>
 		</h1>
-		<h2 className="text-orange-500 text-xl sm:text-2xl font-cinzel font-semibold text-shadow-md">
+		{/* <h2 className="text-orange-500 text-xl sm:text-2xl font-cinzel font-semibold text-shadow-md">
 			A Frontend Web Developer
-		</h2>
+		</h2> */}
 		<p className="text-secondary/70 text-lg sm:w-3/4">
 			I&apos;m a full stack web developer, passionate about creating responsive and user-friendly web applications. I&apos;ve been making websites since 2021 and writing on this blog!
 		</p>

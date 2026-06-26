@@ -1,28 +1,35 @@
 import { blogs } from "@/lib";
+import Image from "next/image";
 
-
-export const Blogs = () => {
-	return (
-		<article
-			id="blogs"
-			className="p-4 flex flex-col justify-center items-center text-center gap-4"
-		>
-			<h2 className="title">Blogs</h2>
-			<div className="flex flex-wrap justify-center gap-10 w-full max-w-3xl">
-				{blogs.map((blog) => (
-					<a
-						key={blog.title}
-						// href={blog.link}
-						target="_blank"
-						className="w-xs p-8 border-2 border-gray-300 rounded-lg flex flex-col justify-center items-center gap-4"
-					>
-						<h3 className="text-xl font-cinzel font-semibold">{blog.title}</h3>
-						<p className="text-gray-600 dark:text-gray-400 text-md">
-							{blog.des}
-						</p>
-					</a>
-				))}
-			</div>
-		</article>
-	);
-};
+export const Blogs = () => (
+	<article className="flex flex-col justify-center gap-4">
+		<div className="flex flex-col justify-center mb-4">
+			<h2 className="title flex items-center gap-4">
+				<Image
+					src="/pencil.png"
+					alt="Pencil"
+					width={40}
+					height={40}
+					className="border-2 rounded-md border-secondary/80"
+				/>
+				<span>Blog</span>
+			</h2>
+			<p className="subtitle">Guides, references, and tutorials.</p>
+		</div>
+		<div className="">
+			{blogs.map((blog) => (
+				<a
+					key={blog.title}
+					// href={blog.link}
+					className="flex flex-col mb-4"
+				>
+					<p className="text-secondary/60">
+						March 31
+						{/* {blog.des} */}
+					</p>
+					<h3 className="text-orange-300 text-lg font-bold underline decoration-dotted decoration-2">{blog.title}</h3>
+				</a>
+			))}
+		</div>
+	</article>
+);

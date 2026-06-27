@@ -2,18 +2,22 @@ export const links = [
   {
     name: "Blog",
     href: "/blog",
+    icon: "/blog.png",
   },
 	{
-		name: "Notes",
+    name: "Notes",
 		href: "/notes",
+    icon: "/notes.png",
 	},
   {
     name: "Projects",
     href: "/projects",
+    icon: "/projects.png",
   },
 	{
 		name: "About Me",
 		href: "/me",
+		icon: "/about.png",
 	},
 ];
 
@@ -106,3 +110,6 @@ export const blogs = [
 		link: "/automation-guide",
 	},
 ];
+
+export const notes = [];
+

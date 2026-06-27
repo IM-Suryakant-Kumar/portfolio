@@ -8,8 +8,8 @@ export const Projects = () => {
 			<div className="flex flex-col justify-center mb-4">
 				<h2 className="title flex items-center gap-4">
 					<Image
-						src="/github.png"
-						alt="github project"
+						src="/projects.png"
+						alt="project"
 						width={40}
 						height={40}
 						className="border-2 rounded-md border-secondary/80 p-1"

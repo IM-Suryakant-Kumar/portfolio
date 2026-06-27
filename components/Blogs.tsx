@@ -1,30 +1,34 @@
 import { blogs } from "@/lib";
+import Image from "next/image";
 
-
-const Blogs = () => {
-	return (
-		<article
-			id="blogs"
-			className="p-4 flex flex-col justify-center items-center text-center gap-4"
-		>
-			<h2 className="title">Blogs</h2>
-			<div className="flex flex-wrap justify-center gap-10 w-full max-w-3xl">
-				{blogs.map((blog) => (
-					<a
-						key={blog.title}
-						// href={blog.link}
-						target="_blank"
-						className="w-xs p-8 border-2 border-gray-300 rounded-lg flex flex-col justify-center items-center gap-4"
-					>
-						<h3 className="text-xl font-cinzel font-semibold">{blog.title}</h3>
-						<p className="text-gray-600 dark:text-gray-400 text-md">
-							{blog.des}
-						</p>
-					</a>
-				))}
-			</div>
-		</article>
-	);
-};
-
-export default Blogs;
+export const Blogs = () => (
+	<article className="flex flex-col justify-center gap-4">
+		<div className="flex flex-col justify-center mb-4">
+			<h2 className="title flex items-center gap-4">
+				<Image
+					src="/blog.png"
+					alt="Blog"
+					width={40}
+					height={40}
+					className="border-2 rounded-md border-secondary/80 p-1"
+				/>
+				<span>Blog</span>
+			</h2>
+			<p className="subtitle">Guides, references, and tutorials.</p>
+		</div>
+		<div className="flex flex-col items-start">
+			{blogs.map((blog) => (
+				<a
+					key={blog.title}
+					href={blog.link}
+					className="flex flex-col mb-4 hover:bg-secondary/5 py-1 px-0.5 rounded-md transition-all duration-300"
+				>
+					<p className="text-secondary/60">{blog.published}</p>
+					<h3 className="text-blue-400 text-lg font-bold underline decoration-secondary decoration-dotted decoration-2 underline-offset-7">
+						{blog.title}
+					</h3>
+				</a>
+			))}
+		</div>
+	</article>
+);

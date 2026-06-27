@@ -16,17 +16,17 @@ export const Blogs = () => (
 			</h2>
 			<p className="subtitle">Guides, references, and tutorials.</p>
 		</div>
-		<div className="">
+		<div className="flex flex-col items-start">
 			{blogs.map((blog) => (
 				<a
 					key={blog.title}
 					href={blog.link}
-					className="flex flex-col mb-4"
+					className="flex flex-col mb-4 hover:bg-secondary/5 py-1 px-0.5 rounded-md transition-all duration-300"
 				>
-					<p className="text-secondary/60">
-						{blog.published}
-					</p>
-					<h3 className="text-blue-400 text-lg font-bold underline decoration-secondary decoration-dotted decoration-2 underline-offset-7">{blog.title}</h3>
+					<p className="text-secondary/60">{blog.published}</p>
+					<h3 className="text-blue-400 text-lg font-bold underline decoration-secondary decoration-dotted decoration-2 underline-offset-7">
+						{blog.title}
+					</h3>
 				</a>
 			))}
 		</div>

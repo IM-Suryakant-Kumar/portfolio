@@ -20,11 +20,11 @@ export const Blogs = () => (
 			{blogs.map((blog) => (
 				<a
 					key={blog.title}
-					// href={blog.link}
+					href={blog.link}
 					className="flex flex-col mb-4"
 				>
 					<p className="text-secondary/60">
-						{blog.des}
+						{blog.published}
 					</p>
 					<h3 className="text-blue-400 text-lg font-bold underline decoration-secondary decoration-dotted decoration-2 underline-offset-7">{blog.title}</h3>
 				</a>

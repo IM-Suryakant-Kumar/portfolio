@@ -25,27 +25,43 @@ export const Projects = () => {
 					<div
 						key={project.title}
 						className="border-2 border-secondary/10 rounded-lg overflow-hidden flex flex-col gap-2 p-4"
-          >
-            <p className="text-secondary/60 text-sm">2019</p>
-						<Link href={project.github} target="_blank" className="text-blue-400 hover:underline text-xl font-cinzel font-semibold">
+					>
+						<p className="text-secondary/60 text-sm">{project.year}</p>
+						<Link
+							href={project.source}
+							target="_blank"
+							className="text-blue-400 hover:underline text-xl font-cinzel font-semibold"
+						>
 							{project.title}
 						</Link>
-						<p className="text-md text-secondary/80">{project.des}</p>
+						<p className="text-md text-secondary/80">{project.subtitle}</p>
 						<div className="flex gap-2 mt-2">
-							<a
-								className="text-secondary hover:text-blue-400 h-8 flex justify-center items-center text-sm font-semibold px-2 border-2 border-secondary/10 hover:border-blue-400 rounded-md"
-								href={project.live}
-								target="_blank"
-							>
-								Demo
-							</a>
-							<a
-								className="text-secondary hover:text-blue-400 h-8 flex justify-center items-center text-sm font-semibold px-2 border-2 border-secondary/10 hover:border-blue-400 rounded-md"
-								href={project.github}
-								target="_blank"
-							>
-								Source
-							</a>
+							{project.article && (
+								<a
+									className="text-secondary hover:text-blue-400 h-8 flex justify-center items-center text-sm font-semibold px-2 border-2 border-secondary/10 hover:border-blue-400 rounded-md"
+									href={project.article}
+								>
+									Article
+								</a>
+							)}
+							{project.demo && (
+								<a
+									className="text-secondary hover:text-blue-400 h-8 flex justify-center items-center text-sm font-semibold px-2 border-2 border-secondary/10 hover:border-blue-400 rounded-md"
+									href={project.demo}
+									target="_blank"
+								>
+									Demo
+								</a>
+							)}
+							{project.source && (
+								<a
+									className="text-secondary hover:text-blue-400 h-8 flex justify-center items-center text-sm font-semibold px-2 border-2 border-secondary/10 hover:border-blue-400 rounded-md"
+									href={project.source}
+									target="_blank"
+								>
+									Source
+								</a>
+							)}
 						</div>
 					</div>
 				))}

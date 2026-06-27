@@ -16,9 +16,9 @@ export const Sidebar = () => {
 					<h2 className="text-secondary text-lg font-bold">About me</h2>
 					<p className="text-secondary/70">
 						I&apos;m{" "}
-						<span className="font-bold underline decoration-dotted text-orange-500 font-cinzel">
+						<Link href="/me" className="font-bold underline decoration-dotted text-blue-400 font-cinzel">
 							Suryakant
-						</span>
+						</Link>
 						, Full Stack Web Developer.
 					</p>
 				</div>

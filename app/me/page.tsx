@@ -20,21 +20,21 @@ const page = () => {
 						Hey, I&apos;m Suryakant! Welcome to my corner of the web for{" "}
 						<Link
 							href="/notes"
-							className="text-blue-400 underline decoration-dotted"
+							className="text-blue-400 hover:bg-secondary/10 underline decoration-dotted"
 						>
 							writting
 						</Link>
 						,{" "}
 						<Link
 							href="/projects"
-							className="text-blue-400 underline decoration-dotted"
+							className="text-blue-400 hover:bg-secondary/10 underline decoration-dotted"
 						>
 							projects
 						</Link>
 						,{" "}
 						<Link
 							href="/blog"
-							className="text-blue-400 underline decoration-dotted"
+							className="text-blue-400 hover:bg-secondary/10 underline decoration-dotted"
 						>
 							tutorials
 						</Link>{" "}
